@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Partida extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'acertos',
+        'erros',
+        'data_hora',
+    ];
 }
