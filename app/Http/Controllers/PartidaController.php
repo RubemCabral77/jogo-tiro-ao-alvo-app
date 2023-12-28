@@ -25,4 +25,10 @@ class PartidaController extends Controller
 
         // return redirect('/pagina_a_definir');
     }
+    public function show()
+    {
+        $partidas = Partida::orderBy('acertos', 'desc')->orderBy('erros', 'asc')->orderBy('data_hora', 'desc')->get();
+
+        return view('partida.show', compact('partidas'));
+    }
 }
