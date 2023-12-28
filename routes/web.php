@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PartidaController;
+use App\Http\Controllers\JogoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +31,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/ranking', [PartidaController::class, 'show'])->middleware(['auth', 'verified'])->name('partida.show');
+
+Route::get('/jogo', [JogoController::class, 'show'])->middleware(['auth', 'verified'])->name('jogo.show');
+
+Route::post('/partida/create', [PartidaController::class, 'create'])->middleware(['auth', 'verified'])->name('partida.create');
+
 require __DIR__.'/auth.php';
