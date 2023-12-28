@@ -23,7 +23,7 @@ class PartidaController extends Controller
 
         session()->flash('msg', ['tipo' => 'success', 'text' => 'Progresso salvo, verifique o ranking']);
 
-        // return redirect('/pagina_a_definir');
+        return redirect('/ranking');
     }
     public function show()
     {
