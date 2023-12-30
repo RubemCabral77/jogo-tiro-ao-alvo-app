@@ -10,6 +10,7 @@
                 <div class="p-6 text-gray-900">
                     @include('jogo.partials.punctuation')
                     @include('jogo.partials.scenario')
+                    <br>
                 </div>
             </div>
         </div>
