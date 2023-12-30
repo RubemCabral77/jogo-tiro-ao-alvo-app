@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 
-* {
-    /* padding: 0;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box; */
-}
-
 :root {
     --amarelo: #dde15b;
     --azul: #3437f7;
@@ -16,7 +9,6 @@
     --cor-terciaria: #ececec;
     --cor-quintenaria: #101820;
     --font-titulo: 'Itim', cursive;
-    /* font-size: 62.5%; */
 }
 
 /* classes repetitivas */
