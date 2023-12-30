@@ -1,0 +1,124 @@
+:root {
+    --amarelo: #dde15b;
+    --azul: #3437f7;
+    --cor-terciaria: #ececec;
+    --font-titulo: 'Itim', cursive;
+}
+
+
+/* section */
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+}
+
+.section-content {
+    height: 100%;
+    width: 1200px;
+    max-width: 100%;
+    padding: 2rem;
+}
+
+.section-text {
+    grid-column: span 6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: .5rem;
+}
+
+.section-text h1 {
+    color: var(--amarelo);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section-text h1::after {
+    margin-bottom: 2rem;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--cor-terciaria);
+}
+
+.section-text h2 {
+    color: var(--amarelo);
+}
+
+.section-text ul {
+    list-style: inside;
+    list-style-position: inside;
+}
+
+.section-text ul li {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--cor-terciaria);
+}
+
+.section-image {
+    grid-column: span 6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#div-chris-img-section {
+    width: 70%;
+    border-radius: 50%;
+    display: flex;
+    padding: 4rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--amarelo);
+}
+
+#div-chris-img-section img {
+    width: 100%;
+    animation: subindo-e-descendo 1s infinite alternate ease-in-out;
+}
+
+@keyframes subindo-e-descendo {
+    0% {
+        transform: translate(0, 5px);
+    }
+
+    100% {
+        transform: translate(0, -5px);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* responsividade da primeira seção */
+    .section-text {
+        grid-column: span 12;
+    }
+
+    .section-image {
+        grid-column: span 12;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #div-chris-img-section {
+        display: none;
+    }
+
+    #div-erros {
+        width: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    #div-chris-img-section {
+        display: none;
+    }
+}
