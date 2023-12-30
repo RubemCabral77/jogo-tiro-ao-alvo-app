@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    /* padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box; */
+}
+
+:root {
+    --amarelo: #dde15b;
+    --azul: #3437f7;
+    --cor-backgroud: #BFC0C0;
+    --cor-principal: #2d3142;
+    --cor-secundaria: #4d49be;
+    --cor-terciaria: #ececec;
+    --cor-quintenaria: #101820;
+    --font-titulo: 'Itim', cursive;
+    /* font-size: 62.5%; */
+}
+
+/* classes repetitivas */
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: normal;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.box {
+    padding: 1em;
+    border-radius: 0.5rem;
+}
+
+.mt1 {
+    margin-top: 1em;
+}
+
+.mb1 {
+    margin-bottom: 1em;
+}
+
+.espaco-ao-redor {
+    justify-content: space-around;
+}
+
+.centro-horizontal-col {
+    display: flex;
+    justify-content: center;
+}
+
+/* cenario */
+
+#div-cenario {
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#div-erros {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cronometro {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cronometro span {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.pilhas {
+    width: 30%;
+}
+
+#cenario {
+    background-image: url(../images/corleone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    cursor: url("../images/bateria_resized.png"), default;
+
+    margin-bottom: 2.5em;
+}
+
+.modal {
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 3rem;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--azul);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal h3 {
+    font-size: 1.2rem;
+    color: var(--amarelo);
+    text-align: center;
+}
+
+.modal h2 {
+    font-size: 1.2rem;
+    color: var(--amarelo);
+    margin-bottom: 1rem;
+}
+
+#modal-start {
+    visibility: visible;
+}
+
+#modal-game-over {
+    visibility: hidden;
+}
+
+.div-conteudo-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.div-conteudo-modal form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div-conteudo-modal form h3 {
+    text-align: center;
+}
+
+.div-conteudo-modal form input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #ececec;
+}
+
+.div-conteudo-modal form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.div-conteudo-modal form .form-group label {
+    color: var(--amarelo);
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.div-conteudo-modal form .btn-salvar {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border: var(--amarelo) solid 2px;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: var(--azul);
+    color: var(--amarelo);
+    cursor: pointer;
+}
+
+.div-conteudo-modal form .btn-salvar:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--amarelo);
+}
+
+.div-btn-start {
+    padding-top: 1rem;
+}
+
+.div-btn-start button {
+    padding: 1rem;
+    border: var(--amarelo) solid 2px;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: var(--azul);
+    color: var(--amarelo);
+    cursor: pointer;
+    width: 100%;
+}
+
+.div-btn-start button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--amarelo);
+}
+
+@media (max-width: 768px) {
+
+    /* responsividade da primeira seção */
+    .section-text {
+        grid-column: span 12;
+    }
+
+    .section-image {
+        grid-column: span 12;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #div-chris-img-section {
+        display: none;
+    }
+
+    #div-erros {
+        width: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    #div-chris-img-section {
+        display: none;
+    }
+}
